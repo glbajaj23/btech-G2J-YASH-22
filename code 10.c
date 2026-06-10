@@ -111,28 +111,3 @@ void solveQ40() {
 }
 
 
-// --- MAIN FUNCTION ---
-int main() {
-    int choice;
-
-    printf("==================================================\n");
-    printf("        DAY 10 ASSIGNMENTS (MENU DRIVEN)          \n");
-    printf("==================================================\n");
-    printf("37. Run Q37 (Star Pyramid)\n");
-    printf("38. Run Q38 (Reverse Star Pyramid)\n");
-    printf("39. Run Q39 (Number Pyramid)\n");
-    printf("40. Run Q40 (Character Pyramid)\n");
-    printf("==================================================\n");
-    printf("Select a program to run (37-40): ");
-    scanf("%d", &choice);
-
-    switch(choice) {
-        case 37: solveQ37(); break;
-        case 38: solveQ38(); break;
-        case 39: solveQ39(); break;
-        case 40: solveQ40(); break;
-        default: printf("Invalid choice! Please select a number between 37 and 40.\n");
-    }
-
-    return 0;
-}
