@@ -1,59 +1,61 @@
-// ============================================================================
-// Title: Summer Vacation Self Learning Assignments - Day 10 (Full Pyramids)
-// Company Information: TCS, Infosys, Wipro, Microsoft, Adobe, Paytm
-// ============================================================================
+Q38: Program to Print reverse pyramid
+// Expected Output Pattern:
+// *********
+//  *******
+//   *****
+//    ***
+//     *
 #include <stdio.h>
 
-// --- FUNCTIONS FOR EACH PATTERN ---
+int main() {
+    int n, i, j, space;
 
-// Q37: Program to Print star pyramid
+    printf("Enter number of rows: ");
+    scanf("%d", &n);
+
+    for(i = n; i >= 1; i--) {
+        for(space = 0; space < n - i; space++) {
+            printf(" ");
+        }
+
+        for(j = 1; j <= (2 * i - 1); j++) {
+            printf("*");
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}
+Q37: Program to Print star pyramid
 // Expected Output Pattern:
 //     *
 //    ***
 //   *****
 //  *******
 // *********
-void solveQ37() {
-    int rows = 5;
-    printf("\n--- Q37: Star Pyramid ---\n");
-    
-    for (int i = 1; i <= rows; i++) {
-        // Loop to print leading spaces
-        for (int space = 1; space <= rows - i; space++) {
+#include <stdio.h>
+
+int main() {
+    int n, i, j, space;
+
+    printf("Enter number of rows: ");
+    scanf("%d", &n);
+
+    for(i = 1; i <= n; i++) {
+        for(space = 1; space <= n - i; space++) {
             printf(" ");
         }
-        // Loop to print stars (2*i - 1 stars in row i)
-        for (int j = 1; j <= (2 * i - 1); j++) {
+
+        for(j = 1; j <= (2 * i - 1); j++) {
             printf("*");
         }
+
         printf("\n");
     }
-}
 
-// Q38: Program to Print reverse pyramid
-// Expected Output Pattern:
-// *********
-//  *******
-//   *****
-//    ***
-//     *
-void solveQ38() {
-    int rows = 5;
-    printf("\n--- Q38: Reverse Star Pyramid ---\n");
-    
-    for (int i = rows; i >= 1; i--) {
-        // Loop to print leading spaces
-        for (int space = 1; space <= rows - i; space++) {
-            printf(" ");
-        }
-        // Loop to print stars
-        for (int j = 1; j <= (2 * i - 1); j++) {
-            printf("*");
-        }
-        printf("\n");
-    }
+    return 0;
 }
-
 // Q39: Program to Print number pyramid
 // Expected Output Pattern:
 //     1
@@ -61,27 +63,29 @@ void solveQ38() {
 //   12321
 //  1234321
 // 123454321
-void solveQ39() {
-    int rows = 5;
-    printf("\n--- Q39: Number Pyramid ---\n");
-    
-    for (int i = 1; i <= rows; i++) {
-        // Loop to print spaces
-        for (int space = 1; space <= rows - i; space++) {
+#include <stdio.h>
+
+int main() {
+    int n, i, j, space;
+
+    printf("Enter number of rows: ");
+    scanf("%d", &n);
+
+    for(i = 1; i <= n; i++) {
+
+        for(space = 1; space <= n - i; space++) {
             printf(" ");
         }
-        // Loop to print increasing numbers
-        for (int j = 1; j <= i; j++) {
-            printf("%d", j);
+
+        for(j = 1; j <= i; j++) {
+            printf("%d ", j);
         }
-        // Loop to print decreasing numbers
-        for (int j = i - 1; j >= 1; j--) {
-            printf("%d", j);
-        }
+
         printf("\n");
     }
-}
 
+    return 0;
+}
 // Q40: Program to Print character pyramid
 // Expected Output Pattern:
 //     A
@@ -89,25 +93,26 @@ void solveQ39() {
 //   ABCBA
 //  ABCDCBA
 // ABCDEDCBA
-void solveQ40() {
-    int rows = 5;
-    printf("\n--- Q40: Character Pyramid ---\n");
-    
-    for (int i = 1; i <= rows; i++) {
-        // Loop to print spaces
-        for (int space = 1; space <= rows - i; space++) {
+#include <stdio.h>
+
+int main() {
+    int n, i, j, space;
+
+    printf("Enter number of rows: ");
+    scanf("%d", &n);
+
+    for(i = 1; i <= n; i++) {
+
+        for(space = 1; space <= n - i; space++) {
             printf(" ");
         }
-        // Loop to print increasing characters
-        for (int j = 1; j <= i; j++) {
-            printf("%c", 'A' + j - 1);
+
+        for(j = 0; j < i; j++) {
+            printf("%c ", 'A' + j);
         }
-        // Loop to print decreasing characters
-        for (int j = i - 1; j >= 1; j--) {
-            printf("%c", 'A' + j - 1);
-        }
+
         printf("\n");
     }
+
+    return 0;
 }
-
-
